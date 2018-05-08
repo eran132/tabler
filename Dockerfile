@@ -2,7 +2,7 @@ FROM node:carbon
 MAINTAINER eran132@gmail.com
 WORKDIR /tabler
 RUN npm install
-RUN apt-get install -y ruby && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y ruby && rm -rf /var/lib/apt/lists/*
 RUN gem install bundler
 RUN bundle install
 
